@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { DollarSign, AlertTriangle, Search, Phone, TrendingUp, Users, Shield, CheckCircle, Database, CreditCard, Loader, Zap, Brain, Eye, Lock, Cpu } from 'lucide-react';
+import ScrollAnimatedSection from '../components/ScrollAnimatedSection';
 
 const ScamPage = () => {
   const [phoneNumber, setPhoneNumber] = useState('');

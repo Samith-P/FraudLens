@@ -1,0 +1,182 @@
+/* Base scroll animation styles */
+.scroll-animated {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.scroll-animated.visible {
+  opacity: 1;
+}
+
+/* Fade Up Animation */
+.scroll-animated.fade-up {
+  transform: translateY(60px);
+}
+
+.scroll-animated.fade-up.visible {
+  transform: translateY(0);
+}
+
+/* Fade Down Animation */
+.scroll-animated.fade-down {
+  transform: translateY(-60px);
+}
+
+.scroll-animated.fade-down.visible {
+  transform: translateY(0);
+}
+
+/* Slide Left Animation */
+.scroll-animated.slide-left {
+  transform: translateX(80px);
+}
+
+.scroll-animated.slide-left.visible {
+  transform: translateX(0);
+}
+
+/* Slide Right Animation */
+.scroll-animated.slide-right {
+  transform: translateX(-80px);
+}
+
+.scroll-animated.slide-right.visible {
+  transform: translateX(0);
+}
+
+/* Scale Animation */
+.scroll-animated.scale {
+  transform: scale(0.8);
+}
+
+.scroll-animated.scale.visible {
+  transform: scale(1);
+}
+
+/* Zoom In Animation */
+.scroll-animated.zoom-in {
+  transform: scale(0.5);
+}
+
+.scroll-animated.zoom-in.visible {
+  transform: scale(1);
+}
+
+/* Rotate In Animation */
+.scroll-animated.rotate-in {
+  transform: rotate(-10deg) scale(0.9);
+}
+
+.scroll-animated.rotate-in.visible {
+  transform: rotate(0) scale(1);
+}
+
+/* Flip Animation */
+.scroll-animated.flip {
+  transform: perspective(1000px) rotateY(90deg);
+}
+
+.scroll-animated.flip.visible {
+  transform: perspective(1000px) rotateY(0);
+}
+
+/* Bounce In Animation */
+.scroll-animated.bounce-in {
+  transform: scale(0.3);
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.scroll-animated.bounce-in.visible {
+  transform: scale(1);
+}
+
+/* Slide Up Fade Animation */
+.scroll-animated.slide-up-fade {
+  transform: translateY(80px);
+  opacity: 0;
+  filter: blur(10px);
+}
+
+.scroll-animated.slide-up-fade.visible {
+  transform: translateY(0);
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* Slide Down Fade Animation */
+.scroll-animated.slide-down-fade {
+  transform: translateY(-80px);
+  opacity: 0;
+  filter: blur(10px);
+}
+
+.scroll-animated.slide-down-fade.visible {
+  transform: translateY(0);
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* Blur Animation */
+.scroll-animated.blur-in {
+  filter: blur(20px);
+}
+
+.scroll-animated.blur-in.visible {
+  filter: blur(0);
+}
+
+/* Glow Animation */
+.scroll-animated.glow {
+  filter: brightness(0.3);
+}
+
+.scroll-animated.glow.visible {
+  filter: brightness(1);
+  box-shadow: 0 0 30px rgba(100, 181, 246, 0.3);
+}
+
+/* Stagger helpers */
+.stagger-container {
+  display: contents;
+}
+
+.stagger-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.stagger-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Parallax effect */
+.parallax-wrapper {
+  overflow: hidden;
+}
+
+.parallax-element {
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-animated,
+  .scroll-animated.visible,
+  .stagger-item,
+  .stagger-item.visible,
+  .parallax-element {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

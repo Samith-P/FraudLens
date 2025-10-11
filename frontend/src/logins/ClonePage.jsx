@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Copy, Search, Globe, AlertTriangle, CheckCircle, TrendingUp, Users, Upload, Eye, FileImage, X, Brain, Cpu } from 'lucide-react';
+import ScrollAnimatedSection from '../components/ScrollAnimatedSection';
 
 const ClonePage = () => {
   const [url, setUrl] = useState('');

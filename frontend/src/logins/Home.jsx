@@ -6,6 +6,7 @@ import PhishingPage from './PhishingPage';
 import MalwarePage from './MalwarePage';
 import ClonePage from './ClonePage';
 import ScamPage from './ScamPage';
+import ScrollAnimatedSection from '../components/ScrollAnimatedSection';
 import './Home.css';
 import ProfilePage from './profile.jsx';
 const Home = () => {
@@ -139,129 +140,161 @@ const Home = () => {
       default:
         return (
           <div className="home-content">
-            <div className="hero-section">
-              <div className="hero-text animate-slide-in-left">
-                <h1>FraudLens: Advanced AI-Powered Cybersecurity Platform</h1>
-                <p>Professional-grade cybersecurity suite featuring cutting-edge AI and machine learning technologies. Our comprehensive platform delivers real-time protection against phishing, malware, clone attacks, and fraud with industry-leading accuracy rates and instant threat response.</p>
-                <div className="hero-buttons">
-                  <button
-                    className="btn-primary hover-scale"
-                    onClick={() => !isAuthenticated ? navigate('/Login') : handleFeatureAccess('phishing')}
-                  >
-                    Start Protection
-                  </button>
-                  <button className="btn-secondary hover-scale">View Documentation</button>
-                </div>
-              </div>
-              <div className="hero-visual animate-slide-in-right">
-                <div className="security-shield">
-                  <Shield size={80} />
-                  <div className="shield-rings">
-                    <div className="ring ring-1"></div>
-                    <div className="ring ring-2"></div>
-                    <div className="ring ring-3"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="features-section">
-              <h2 className="animate-slide-in-up">AI-Powered Security Modules</h2>
-              <div className="features-grid">
-                {features.map((feature, index) => (
-                  <div
-                    key={index}
-                    className="feature-item animate-fade-in-up hover-lift"
-                    style={{ animationDelay: `${index * 0.15}s` }}
-                  >
-                    <div className={`feature-icon-wrapper bg-gradient-to-br ${feature.gradient}`}>
-                      <feature.icon className="feature-icon" />
+            <ScrollAnimatedSection animation="fade-up" threshold={0.2} triggerOnce={false}>
+              <div className="hero-section">
+                <ScrollAnimatedSection animation="slide-right" delay={200} triggerOnce={false}>
+                  <div className="hero-text">
+                    <h1>FraudLens: Advanced AI-Powered Cybersecurity Platform</h1>
+                    <p>Professional-grade cybersecurity suite featuring cutting-edge AI and machine learning technologies. Our comprehensive platform delivers real-time protection against phishing, malware, clone attacks, and fraud with industry-leading accuracy rates and instant threat response.</p>
+                    <div className="hero-buttons">
+                      <button
+                        className="btn-primary hover-scale"
+                        onClick={() => !isAuthenticated ? navigate('/Login') : handleFeatureAccess('phishing')}
+                      >
+                        Start Protection
+                      </button>
+                      <button className="btn-secondary hover-scale">View Documentation</button>
                     </div>
-                    <h3>{feature.title}</h3>
-                    <p>{feature.description}</p>
-                    {feature.capabilities && (
-                      <ul className="capability-list">
-                        {feature.capabilities.map((capability, capIndex) => (
-                          <li key={capIndex} className="capability-item">
-                            <CheckCircle size={12} className="capability-check" />
-                            {capability}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
                   </div>
-                ))}
+                </ScrollAnimatedSection>
+                <ScrollAnimatedSection animation="slide-left" delay={400} triggerOnce={false}>
+                  <div className="hero-visual">
+                    <div className="security-shield">
+                      <Shield size={80} />
+                      <div className="shield-rings">
+                        <div className="ring ring-1"></div>
+                        <div className="ring ring-2"></div>
+                        <div className="ring ring-3"></div>
+                      </div>
+                    </div>
+                  </div>
+                </ScrollAnimatedSection>
               </div>
-            </div>
+            </ScrollAnimatedSection>
+
+            <ScrollAnimatedSection animation="fade-up" threshold={0.2} triggerOnce={false}>
+              <div className="features-section">
+                <ScrollAnimatedSection animation="slide-up-fade" delay={100} triggerOnce={false}>
+                  <h2>AI-Powered Security Modules</h2>
+                </ScrollAnimatedSection>
+                <div className="features-grid">
+                  {features.map((feature, index) => (
+                    <ScrollAnimatedSection 
+                      key={index}
+                      animation="scale" 
+                      delay={index * 150}
+                      threshold={0.1}
+                      triggerOnce={false}
+                    >
+                      <div className="feature-item hover-lift">
+                        <div className={`feature-icon-wrapper bg-gradient-to-br ${feature.gradient}`}>
+                          <feature.icon className="feature-icon" />
+                        </div>
+                        <h3>{feature.title}</h3>
+                        <p>{feature.description}</p>
+                        {feature.capabilities && (
+                          <ul className="capability-list">
+                            {feature.capabilities.map((capability, capIndex) => (
+                              <li key={capIndex} className="capability-item">
+                                <CheckCircle size={12} className="capability-check" />
+                                {capability}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    </ScrollAnimatedSection>
+                  ))}
+                </div>
+              </div>
+            </ScrollAnimatedSection>
 
             {/* Performance Statistics */}
-            <div className="stats-section">
-              <h2 className="animate-slide-in-up">Platform Performance Metrics</h2>
-              <div className="stats-grid">
-                {stats.map((stat, index) => (
-                  <div
-                    key={index}
-                    className="stat-item animate-fade-in-up hover-lift"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="stat-icon">
-                      <stat.icon size={24} />
-                    </div>
-                    <div className="stat-number">{stat.number}</div>
-                    <div className="stat-label">{stat.label}</div>
-                  </div>
-                ))}
+            <ScrollAnimatedSection animation="fade-up" threshold={0.2} triggerOnce={false}>
+              <div className="stats-section">
+                <ScrollAnimatedSection animation="slide-up-fade" delay={100} triggerOnce={false}>
+                  <h2>Platform Performance Metrics</h2>
+                </ScrollAnimatedSection>
+                <div className="stats-grid">
+                  {stats.map((stat, index) => (
+                    <ScrollAnimatedSection 
+                      key={index}
+                      animation="bounce-in" 
+                      delay={index * 100}
+                      threshold={0.1}
+                      triggerOnce={false}
+                    >
+                      <div className="stat-item hover-lift">
+                        <div className="stat-icon">
+                          <stat.icon size={24} />
+                        </div>
+                        <div className="stat-number">{stat.number}</div>
+                        <div className="stat-label">{stat.label}</div>
+                      </div>
+                    </ScrollAnimatedSection>
+                  ))}
+                </div>
               </div>
-            </div>
+            </ScrollAnimatedSection>
 
             {/* Professional Contact Section */}
-            <div className="contact-section">
-              <div className="contact-container">
-                <div className="contact-header">
-                  <h2 className="animate-slide-in-up">Get In Touch</h2>
-                  <p className="animate-slide-in-up">Ready to enhance your cybersecurity posture? Contact our security experts for custom solutions and enterprise deployments.</p>
-                </div>
-                
-                <div className="contact-grid">
-                  <div className="contact-info animate-fade-in-left">
-                    <h3>Contact Information</h3>
-                    <div className="contact-item">
-                      <span className="contact-label">Email:</span>
-                      <a href="mailto:karthikeyamaddu@gmail.com" className="contact-link">karthikeyamaddu@gmail.com</a>
+            <ScrollAnimatedSection animation="fade-up" threshold={0.2} triggerOnce={false}>
+              <div className="contact-section">
+                <div className="contact-container">
+                  <ScrollAnimatedSection animation="slide-up-fade" delay={100} triggerOnce={false}>
+                    <div className="contact-header">
+                      <h2>Get In Touch</h2>
+                      <p>Ready to enhance your cybersecurity posture? Contact our security experts for custom solutions and enterprise deployments.</p>
                     </div>
-                    <div className="contact-item">
-                      <span className="contact-label">Support:</span>
-                      <a href="mailto:gannavarapuvinaykumar@gmail.com" className="contact-link">gannavarapuvinaykumar@gmail.com</a>
-                    </div>
-                    <div className="contact-item">
-                      <span className="contact-label">Enterprise:</span>
-                      <a href="mailto:samithp@gmail.com" className="contact-link">samithp@gmail.com</a>
-                    </div>
-                    <div className="contact-item">
-                      <span className="contact-label">Phone:</span>
-                      <span className="contact-text">+91 9959511898</span>
-                    </div>
+                  </ScrollAnimatedSection>
+                  
+                  <div className="contact-grid">
+                    <ScrollAnimatedSection animation="slide-right" delay={200} triggerOnce={false}>
+                      <div className="contact-info">
+                        <h3>Contact Information</h3>
+                        <div className="contact-item">
+                          <span className="contact-label">Email:</span>
+                          <a href="mailto:karthikeyamaddu@gmail.com" className="contact-link">karthikeyamaddu@gmail.com</a>
+                        </div>
+                        <div className="contact-item">
+                          <span className="contact-label">Support:</span>
+                          <a href="mailto:gannavarapuvinaykumar@gmail.com" className="contact-link">gannavarapuvinaykumar@gmail.com</a>
+                        </div>
+                        <div className="contact-item">
+                          <span className="contact-label">Enterprise:</span>
+                          <a href="mailto:samithp@gmail.com" className="contact-link">samithp@gmail.com</a>
+                        </div>
+                        <div className="contact-item">
+                          <span className="contact-label">Phone:</span>
+                          <span className="contact-text">+91 9959511898</span>
+                        </div>
+                      </div>
+                    </ScrollAnimatedSection>
+                    
+                    <ScrollAnimatedSection animation="slide-left" delay={400} triggerOnce={false}>
+                      <div className="contact-features">
+                        <h3>Why Choose FraudLens?</h3>
+                        <ul className="contact-benefits">
+                          <li><CheckCircle size={16} /> AI-powered threat detection with 97.4% accuracy</li>
+                          <li><CheckCircle size={16} /> Real-time protection across multiple attack vectors</li>
+                          <li><CheckCircle size={16} /> Enterprise-grade security architecture</li>
+                          <li><CheckCircle size={16} /> Continuous threat intelligence updates</li>
+                          <li><CheckCircle size={16} /> Professional support and custom integrations</li>
+                          <li><CheckCircle size={16} /> Comprehensive API suite for developers</li>
+                        </ul>
+                      </div>
+                    </ScrollAnimatedSection>
                   </div>
                   
-                  <div className="contact-features animate-fade-in-right">
-                    <h3>Why Choose FraudLens?</h3>
-                    <ul className="contact-benefits">
-                      <li><CheckCircle size={16} /> AI-powered threat detection with 97.4% accuracy</li>
-                      <li><CheckCircle size={16} /> Real-time protection across multiple attack vectors</li>
-                      <li><CheckCircle size={16} /> Enterprise-grade security architecture</li>
-                      <li><CheckCircle size={16} /> Continuous threat intelligence updates</li>
-                      <li><CheckCircle size={16} /> Professional support and custom integrations</li>
-                      <li><CheckCircle size={16} /> Comprehensive API suite for developers</li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div className="contact-footer">
-                  <p>&copy; 2025 FraudLens Security Solutions. All rights reserved.</p>
-                  <p>Advanced AI-Powered Cybersecurity Platform | Professional Threat Detection & Response</p>
+                  <ScrollAnimatedSection animation="fade-up" delay={600} triggerOnce={false}>
+                    <div className="contact-footer">
+                      <p>&copy; 2025 FraudLens Security Solutions. All rights reserved.</p>
+                      <p>Advanced AI-Powered Cybersecurity Platform | Professional Threat Detection & Response</p>
+                    </div>
+                  </ScrollAnimatedSection>
                 </div>
               </div>
-            </div>
+            </ScrollAnimatedSection>
           </div>
         );
     }

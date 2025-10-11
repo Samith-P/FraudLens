@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AlertTriangle, Mail, Link, Shield, Search, FileText, Activity, TrendingUp, Users, CheckCircle, ChevronDown, Settings, Eye, Brain } from 'lucide-react';
+import ScrollAnimatedSection from '../components/ScrollAnimatedSection';
 
 
 const PhishingPage = () => {
