@@ -1,13 +1,13 @@
-// CipherCop Popup Script
-console.log('CipherCop Popup Script Loaded');
+// FraudLens Popup Script
+console.log('FraudLens Popup Script Loaded');
 
 // Initialize popup when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    const popup = new CipherCopPopup();
+    const popup = new FraudLensPopup();
     popup.init();
 });
 
-class CipherCopPopup {
+class FraudLensPopup {
     constructor() {
         this.currentTab = null;
         this.isScanning = false;
@@ -785,15 +785,15 @@ class CipherCopPopup {
         if (this.lastResults) {
             // Open results in a new tab or popup
             const resultsWindow = window.open('', '_blank', 'width=600,height=400');
-            resultsWindow.document.write(`
-                <html>
-                    <head><title>CipherCop - Detailed Results</title></head>
-                    <body>
-                        <h2>Detailed Analysis Results</h2>
-                        <pre>${JSON.stringify(this.lastResults, null, 2)}</pre>
-                    </body>
-                </html>
-            `);
+                resultsWindow.document.write(`
+                    <html>
+                        <head><title>FraudLens - Detailed Results</title></head>
+                        <body>
+                            <h2>Detailed Analysis Results</h2>
+                            <pre>${JSON.stringify(this.lastResults, null, 2)}</pre>
+                        </body>
+                    </html>
+                `);
         }
     }
     
@@ -819,7 +819,7 @@ class CipherCopPopup {
     
     // Show help
     showHelp() {
-        chrome.tabs.create({ url: 'https://github.com/Samith-P/ciphercopdemo' });
+        chrome.tabs.create({ url: 'https://github.com/Samith-P/FraudLens' });
     }
     
     // Update UI

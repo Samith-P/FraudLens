@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Environment File Backup Generator
-This script reads all .env files in the CipherCop project and creates env.txt backups
+This script reads all .env files in the FraudLens project and creates env.txt backups
 in their respective directories.
 """
 
@@ -93,7 +93,7 @@ def create_env_txt_files():
 def main():
     """Main execution function"""
     print("🚀 Environment File Backup Generator")
-    print("📍 Project: CipherCop 2025")
+    print("📍 Project: FraudLens 2025")
     print("🎯 Purpose: Create env.txt backups from .env files")
     print()
     

@@ -1,6 +1,6 @@
-// Storage Utilities for CipherCop Extension
+// Storage Utilities for FraudLens Extension
 
-class CipherCopStorage {
+class FraudLensStorage {
     constructor() {
         this.storageTypes = {
             LOCAL: 'local',
@@ -378,7 +378,7 @@ class CipherCopStorage {
 
 // Export for use in other modules
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = CipherCopStorage;
+    module.exports = FraudLensStorage;
 } else {
-    window.CipherCopStorage = CipherCopStorage;
+    window.FraudLensStorage = FraudLensStorage;
 }

@@ -1,4 +1,4 @@
-# 🔐 Git-Crypt Guide for CipherCop 2025
+# 🔐 Git-Crypt Guide for FraudLens 2025
 
 ## 📋 Table of Contents
 - [Overview](#overview)
@@ -47,7 +47,7 @@ Git-crypt is a transparent file encryption tool for git repositories. It allows 
 
 ### 4. **Setup Automation**
 - Created `setup-git-crypt.bat` for easy initialization
-- Generated encryption key: `ciphercop-git-crypt.key`
+- Generated encryption key: `fraudlens-git-crypt.key`
 - Configured git repository for encryption
 
 ### 5. **Documentation**
@@ -60,10 +60,10 @@ Git-crypt is a transparent file encryption tool for git repositories. It allows 
 ## 📁 File Structure
 
 ```
-ciphercopdemo/
+FraudLens/
 ├── 🔐 Git-Crypt Files
 │   ├── .gitattributes                    # Encryption configuration
-│   ├── ciphercop-git-crypt.key          # 🔑 Encryption key (KEEP SECURE!)
+│   ├── fraudlens-git-crypt.key          # 🔑 Encryption key (KEEP SECURE!)
 │   ├── setup-git-crypt.bat              # Setup automation script
 │   ├── create_env_backups.py            # Backup generation script
 │   └── GIT-CRYPT-README.md              # This guide
@@ -123,7 +123,7 @@ setup-git-crypt.bat
 
 # Or manual setup:
 git-crypt init
-git-crypt export-key ciphercop-git-crypt.key
+git-crypt export-key fraudlens-git-crypt.key
 ```
 
 ---
@@ -142,13 +142,13 @@ git-crypt status
 git-crypt init
 
 # Export encryption key
-git-crypt export-key ciphercop-git-crypt.key
+git-crypt export-key fraudlens-git-crypt.key
 ```
 
 ### **Lock/Unlock Commands**
 ```cmd
 # Unlock encrypted files (for new team members)
-git-crypt unlock ciphercop-git-crypt.key
+git-crypt unlock fraudlens-git-crypt.key
 
 # Lock files (optional - files auto-encrypt on commit)
 git-crypt lock
@@ -228,20 +228,20 @@ git commit -m "Add encrypted environment files"
 git push
 
 # 3. Share key securely with team members
-# Send ciphercop-git-crypt.key via encrypted email or secure file sharing
+# Send fraudlens-git-crypt.key via encrypted email or secure file sharing
 ```
 
 ### **For New Team Members**
 ```cmd
 # 1. Clone the repository
-git clone https://github.com/Samith-P/ciphercopdemo.git
-cd ciphercopdemo
+git clone https://github.com/Samith-P/FraudLens.git
+cd FraudLens
 
 # 2. Setup git-crypt on their machine
 # Install WSL and git-crypt (same process as above)
 
 # 3. Unlock encrypted files using shared key
-git-crypt unlock ciphercop-git-crypt.key
+git-crypt unlock fraudlens-git-crypt.key
 
 # 4. Verify files are decrypted
 git-crypt status
@@ -279,13 +279,13 @@ wsl git-crypt --version
 ```cmd
 # This is normal - git-crypt is already setup
 # Just export the key if needed
-git-crypt export-key ciphercop-git-crypt.key
+git-crypt export-key fraudlens-git-crypt.key
 ```
 
 ### **Problem: Files showing as binary data**
 ```cmd
 # Repository is locked - unlock it
-git-crypt unlock ciphercop-git-crypt.key
+git-crypt unlock fraudlens-git-crypt.key
 
 # Check status
 git-crypt status
@@ -333,7 +333,7 @@ git-crypt status
 ### **Essential Files**
 | File | Purpose | Action Required |
 |------|---------|-----------------|
-| `ciphercop-git-crypt.key` | 🔑 Encryption key | Keep secure, share with team |
+| `fraudlens-git-crypt.key` | 🔑 Encryption key | Keep secure, share with team |
 | `.gitattributes` | 📝 Encryption config | Commit to repository |
 | `setup-git-crypt.bat` | ⚙️ Setup automation | Run once per machine |
 | `create_env_backups.py` | 💾 Backup generator | Run when needed |
@@ -348,11 +348,11 @@ python create_env_backups.py  # Create backups
 git-crypt status              # Check encryption status
 
 # Team member onboarding
-git-crypt unlock ciphercop-git-crypt.key
+git-crypt unlock fraudlens-git-crypt.key
 
 # Emergency
 git-crypt lock                # Lock all files
-git-crypt unlock ciphercop-git-crypt.key  # Unlock again
+git-crypt unlock fraudlens-git-crypt.key  # Unlock again
 ```
 
 ---

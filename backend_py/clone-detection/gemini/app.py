@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parent
 load_dotenv(ROOT / ".env")
 
 # Explicitly set the Google credentials path
-credentials_path = ROOT / "cipher-cop-2025-5ecb70da4b00.json"
+credentials_path = ROOT / "fraudlens-2025-5ecb70da4b00.json"
 if credentials_path.exists():
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = str(credentials_path)
 

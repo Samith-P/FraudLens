@@ -1,4 +1,4 @@
-# CipherCop: AI-Powered Cybersecurity Platform
+# FraudLens: AI-Powered Cybersecurity Platform
 
 ## 🏗️ **Architecture Overview**
 
@@ -129,7 +129,7 @@ flask-cors
 ## 📁 **Directory Structure**
 
 ```
-ciphercopdemo/
+FraudLens/
 ├── frontend/                    # React frontend application
 ├── backend/                     # Node.js API gateway
 ├── backend_py/                  # Python ML services
@@ -177,4 +177,4 @@ ciphercopdemo/
 
 ---
 
-**CipherCop** represents a comprehensive, production-ready cybersecurity platform that combines cutting-edge AI/ML technologies with practical threat detection and response capabilities.
+**FraudLens** represents a comprehensive, production-ready cybersecurity platform that combines cutting-edge AI/ML technologies with practical threat detection and response capabilities.

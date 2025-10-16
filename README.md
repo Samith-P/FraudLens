@@ -1,8 +1,8 @@
-# 🛡️ CipherCop - AI-Powered Cybersecurity Platform
+# 🛡️ FraudLens - AI-Powered Cybersecurity Platform
 
-![CipherCop Banner](https://img.shields.io/badge/CipherCop-Cybersecurity_Platform-blue?style=for-the-badge&logo=shield)
+![FraudLens Banner](https://img.shields.io/badge/FraudLens-Cybersecurity_Platform-blue?style=for-the-badge&logo=shield)
 
-A comprehensive, AI-powered cybersecurity platform that provides real-time protection against phishing attacks, malware threats, website clones, and phone scams. CipherCop combines cutting-edge machine learning models, computer vision, and advanced AI to deliver enterprise-grade security solutions.
+A comprehensive, AI-powered cybersecurity platform that provides real-time protection against phishing attacks, malware threats, website clones, and phone scams. FraudLens combines cutting-edge machine learning models, computer vision, and advanced AI to deliver enterprise-grade security solutions.
 
 ## 🚀 Key Features
 
@@ -86,8 +86,8 @@ A comprehensive, AI-powered cybersecurity platform that provides real-time prote
 
 1. **Clone the Repository**
 ```bash
-git clone https://github.com/your-org/ciphercop-demo.git
-cd ciphercopdemo
+git clone https://github.com/your-org/fraudlens-demo.git
+cd FraudLens
 ```
 
 2. **Environment Setup**
@@ -160,7 +160,7 @@ python app.py  # Port 5005
    - **Scam Detector**: Validate phone numbers
 
 ### Browser Extension
-1. Click the CipherCop extension icon
+1. Click the FraudLens extension icon
 2. Choose analysis type:
    - **Clone Score**: Check current website
    - **Phishing Analysis**: Comprehensive security scan
@@ -220,7 +220,7 @@ python -m pytest backend_py/tests/
 ## 📁 Project Structure
 
 ```
-ciphercopdemo/
+FraudLens/
 ├── frontend/                 # React web application
 │   ├── src/
 │   │   ├── components/      # UI components
@@ -295,7 +295,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Issues**: Report bugs and feature requests
 - **Discussions**: Community Q&A and ideas
 - **Discord**: Real-time community support
-- **Email**: professional-support@ciphercop.com
+-- **Email**: professional-support@fraudlens.com
 
 ## 🙏 Acknowledgments
 
@@ -326,8 +326,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **🛡️ Protecting the digital world, one threat at a time 🛡️**
 
-[![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/your-org/ciphercop-demo)
-[![AI Powered](https://img.shields.io/badge/AI-Powered-blue.svg)](https://github.com/your-org/ciphercop-demo)
-[![Security First](https://img.shields.io/badge/Security-First-green.svg)](https://github.com/your-org/ciphercop-demo)
+[![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/your-org/fraudlens-demo)
+[![AI Powered](https://img.shields.io/badge/AI-Powered-blue.svg)](https://github.com/your-org/fraudlens-demo)
+[![Security First](https://img.shields.io/badge/Security-First-green.svg)](https://github.com/your-org/fraudlens-demo)
 
 </div>

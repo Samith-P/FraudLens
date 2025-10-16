@@ -236,7 +236,7 @@ analyzer = CombinedAnalyzer()
 @app.route("/", methods=["GET"])
 def index():
     return jsonify({
-        "service": "CipherCop Combined Clone Analysis",
+    "service": "FraudLens Combined Clone Analysis",
         "version": "1.0.0",
         "endpoints": ["/analyze"],
         "services": {

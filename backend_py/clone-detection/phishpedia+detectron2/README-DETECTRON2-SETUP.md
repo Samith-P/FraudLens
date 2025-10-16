@@ -24,7 +24,7 @@ This guide provides detailed instructions for setting up Detectron2 with Phishpe
 
 ### Step 1: Create Virtual Environment
 ```bat
-cd "D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend_py\clone-detection\phishpedia+detectron2\Phishpedia"
+cd "D:\volume E\fraudlens-2025\overall\fraudlensdemo\backend_py\clone-detection\phishpedia+detectron2\Phishpedia"
 python -m venv phishpedia_env
 ```
 
@@ -73,7 +73,7 @@ phishpedia_env\Scripts\python.exe -c "import sys; print('Python:', sys.executabl
 ```
 **Expected Output:**
 ```
-Python: D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend_py\clone-detection\phishpedia+detectron2\Phishpedia\phishpedia_env\Scripts\python.exe
+Python: D:\volume E\fraudlens-2025\overall\fraudlensdemo\backend_py\clone-detection\phishpedia+detectron2\Phishpedia\phishpedia_env\Scripts\python.exe
 ```
 
 ### Test 2: Check PyTorch

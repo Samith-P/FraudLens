@@ -1,9 +1,9 @@
-# CipherCop Extension - Installation Guide
+# FraudLens Extension - Installation Guide
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-Make sure your CipherCop backend services are running:
+Make sure your FraudLens backend services are running:
 ```bash
 # Terminal 1: Node.js Backend (Port 5001)
 cd backend
@@ -26,7 +26,7 @@ python WEBtool/app.py
 3. Toggle "Developer mode" ON (top right)
 4. Click "Load unpacked"
 5. Select the `extension` folder from this project
-6. The CipherCop extension will appear in your toolbar
+6. The FraudLens extension will appear in your toolbar
 
 #### Method 2: Edge Developer Mode
 1. Open Microsoft Edge
@@ -38,7 +38,7 @@ python WEBtool/app.py
 
 ### First Use
 1. Navigate to any website (e.g., https://example.com)
-2. Click the CipherCop extension icon in the toolbar
+2. Click the FraudLens extension icon in the toolbar
 3. Use either:
    - **"Check Clone Score"** - Detects website cloning
    - **"Phishing Analysis"** - Analyzes for phishing threats

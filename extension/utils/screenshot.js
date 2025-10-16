@@ -1,6 +1,6 @@
-// Screenshot Utilities for CipherCop Extension
+// Screenshot Utilities for FraudLens Extension
 
-class ScreenshotCapture {
+class FraudLensScreenshotCapture {
     constructor() {
         this.defaultOptions = {
             format: 'png',

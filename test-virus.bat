@@ -7,7 +7,7 @@ echo ===========================
 echo.
 
 :: Go to the Virus service folder
-cd /d "D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend_py\malware-detection\ml-detection\Virus_total_based"
+cd /d "D:\volume E\fraudlens-2025\overall\FraudLens\backend_py\malware-detection\ml-detection\Virus_total_based"
 
 :: Check if app.py exists
 if not exist app.py (
@@ -17,7 +17,7 @@ if not exist app.py (
 )
 
 :: Check if the venv Python exists
-if not exist "D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend_py\malware-detection\ml-detection\.venv\Scripts\python.exe" (
+if not exist "D:\volume E\fraudlens-2025\overall\FraudLens\backend_py\malware-detection\ml-detection\.venv\Scripts\python.exe" (
     echo ❌ ERROR: Python executable not found at .venv\Scripts\python.exe
     pause
     exit /b 1
@@ -25,12 +25,12 @@ if not exist "D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend_py\malwar
 
 :: Print Python version for confirmation
 echo ✅ Found Python. Version is:
-"D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend_py\malware-detection\ml-detection\.venv\Scripts\python.exe" --version
+"D:\volume E\fraudlens-2025\overall\FraudLens\backend_py\malware-detection\ml-detection\.venv\Scripts\python.exe" --version
 echo.
 
 :: Run app.py with correct path
 echo Running app.py now...
-"D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend_py\malware-detection\ml-detection\.venv\Scripts\python.exe" "D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend_py\malware-detection\ml-detection\Virus_total_based\app.py"
+"D:\volume E\fraudlens-2025\overall\FraudLens\backend_py\malware-detection\ml-detection\.venv\Scripts\python.exe" "D:\volume E\fraudlens-2025\overall\FraudLens\backend_py\malware-detection\ml-detection\Virus_total_based\app.py"
 
 echo.
 echo [*] Malware-Virus test finished.

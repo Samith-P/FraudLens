@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 echo =======================================
-echo         CipherCop Service Manager
+echo         FraudLens Service Manager
 echo =======================================
 echo.
 
@@ -29,47 +29,47 @@ echo.
 echo [*] Starting all services...
 
 :: ---- FRONTEND (5173) ----
-cd /d "D:\volume E\ciphercop-2025\overall\ciphercopdemo\frontend"
+cd /d "D:\volume E\fraudlens-2025\overall\FraudLens\frontend"
 if exist env.txt copy /Y env.txt .env >nul
 start "Frontend (5173)" cmd /c "npm install && npm run dev"
 
 :: ---- BACKEND (Node.js, 5001) ----
-cd /d "D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend"
+cd /d "D:\volume E\fraudlens-2025\overall\FraudLens\backend"
 if exist env.txt copy /Y env.txt .env >nul
 start "Backend (5001)" cmd /c "npm install && node server.js"
 
 :: ---- CLONE-AI (Gemini, 5003) ----
-cd /d "D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend_py\clone-detection\gemini"
+cd /d "D:\volume E\fraudlens-2025\overall\FraudLens\backend_py\clone-detection\gemini"
 if exist env.txt copy /Y env.txt .env >nul
 start "Clone-AI (5003)" cmd /c ".venv\Scripts\python.exe app.py"
 
 :: ---- CLONE-ML (Phishpedia, 5000) ----
-cd /d "D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend_py\clone-detection\phishpedia+detectron2\Phishpedia"
+cd /d "D:\volume E\fraudlens-2025\overall\FraudLens\backend_py\clone-detection\phishpedia+detectron2\Phishpedia"
 start "Clone-ML (5000)" cmd /c "phishpedia_env\Scripts\python.exe WEBtool\app.py"
 
 :: ---- MALWARE VIRUS (5004) ----
-cd /d "D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend_py\malware-detection\ml-detection\Virus_total_based"
-start "Malware-Virus (5004)" cmd /c ""D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend_py\malware-detection\ml-detection\.venv\Scripts\python.exe" "D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend_py\malware-detection\ml-detection\Virus_total_based\app.py""
+cd /d "D:\volume E\fraudlens-2025\overall\FraudLens\backend_py\malware-detection\ml-detection\Virus_total_based"
+start "Malware-Virus (5004)" cmd /c ""D:\volume E\fraudlens-2025\overall\FraudLens\backend_py\malware-detection\ml-detection\.venv\Scripts\python.exe" "D:\volume E\fraudlens-2025\overall\FraudLens\backend_py\malware-detection\ml-detection\Virus_total_based\app.py""
 
 
 :: ---- MALWARE ML (5002) ----
-cd /d "D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend_py\malware-detection\ml-detection\ML_based_detectionn"
+cd /d "D:\volume E\fraudlens-2025\overall\FraudLens\backend_py\malware-detection\ml-detection\ML_based_detectionn"
 start "Malware-ML (5002)" cmd /c "..\.venv\Scripts\python.exe app.py"
 
 :: ---- MALWARE SANDBOX (5005) ----
-cd /d "D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend_py\malware-detection"
+cd /d "D:\volume E\fraudlens-2025\overall\FraudLens\backend_py\malware-detection"
 start "Malware-Sandbox (5005)" cmd /c "python sandbox.py"
 
 :: ---- PHONE SCAM DETECTION (5006) ----
-cd /d "D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend_py\phone-number-detection"
+cd /d "D:\volume E\fraudlens-2025\overall\FraudLens\backend_py\phone-number-detection"
 start "Phone-Scam (5006)" cmd /c ".venv\Scripts\activate && .venv\Scripts\python.exe app.py"
 
 :: ---- ML PHISHING DETECTION (5007) ---- [COMMENTED OUT]
-cd /d "D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend_py\phishing-detection\phishing-url-ml"
+cd /d "D:\volume E\fraudlens-2025\overall\FraudLens\backend_py\phishing-detection\phishing-url-ml"
 start "ML-Phishing (5007)" cmd /c ".venv\Scripts\python.exe app.py"
 
 :: ---- EMAIL ML PHISHING DETECTION (5008) ----
-cd /d "D:\volume E\ciphercop-2025\overall\ciphercopdemo\backend_py\phishing-detection\phishing-email-ml"
+cd /d "D:\volume E\fraudlens-2025\overall\FraudLens\backend_py\phishing-detection\phishing-email-ml"
 start "Email-ML-Phishing (5008)" cmd /c "venv\Scripts\python.exe app.py"
 
 echo.

@@ -1,18 +1,18 @@
-// CipherCop Content Script
-console.log('CipherCop Content Script Loaded on:', window.location.href);
+// FraudLens Content Script
+console.log('FraudLens Content Script Loaded on:', window.location.href);
 
 // Initialize content script
 (function() {
   'use strict';
   
   // Check if we're already initialized
-  if (window.ciphercopInitialized) {
+  if (window.fraudlensInitialized) {
     return;
   }
-  window.ciphercopInitialized = true;
+  window.fraudlensInitialized = true;
   
   // Content script functionality
-  const CipherCopContent = {
+  const FraudLensContent = {
     
     // Initialize content script
     init() {
@@ -269,10 +269,10 @@ console.log('CipherCop Content Script Loaded on:', window.location.href);
   // Initialize when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-      CipherCopContent.init();
+      FraudLensContent.init();
     });
   } else {
-    CipherCopContent.init();
+    FraudLensContent.init();
   }
   
 })();

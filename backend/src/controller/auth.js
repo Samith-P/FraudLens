@@ -104,7 +104,7 @@ export const extensionAuth = async (req, res) => {
         const extensionUser = {
             _id: 'extension_user',
             fullName: 'Browser Extension',
-            email: 'extension@ciphercop.local',
+            email: 'extension@fraudlens.local',
             type: 'extension'
         };
         

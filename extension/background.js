@@ -1,5 +1,5 @@
-// CipherCop Background Service Worker
-console.log('CipherCop Extension Background Script Loaded');
+// FraudLens Background Service Worker
+console.log('FraudLens Extension Background Script Loaded');
 
 // API Configuration
 const API_ENDPOINTS = {
@@ -15,7 +15,7 @@ const API_ENDPOINTS = {
 
 // Handle extension installation
 chrome.runtime.onInstalled.addListener(() => {
-  console.log('CipherCop Extension Installed');
+  console.log('FraudLens Extension Installed');
   
   // Set default storage values
   chrome.storage.local.set({
@@ -85,7 +85,7 @@ async function handleScreenshotCapture(sendResponse) {
 // Handle clone detection analysis
 async function handleCloneAnalysis(data, sendResponse) {
   try {
-    console.log('Starting clone analysis for:', data.url);
+  console.log('Starting clone analysis for:', data.url);
     
     const results = {
       gemini: null,
@@ -200,7 +200,7 @@ async function analyzeWithPhishpedia(data) {
 // Handle phishing analysis
 async function handlePhishingAnalysis(data, sendResponse) {
   try {
-    console.log('Starting phishing analysis for:', data.url);
+  console.log('Starting phishing analysis for:', data.url);
     
     // First, authenticate to get session cookies
     await authenticateForPhishing();
@@ -242,7 +242,7 @@ async function handlePhishingAnalysis(data, sendResponse) {
 // Authenticate for phishing analysis
 async function authenticateForPhishing() {
   try {
-    const loginResponse = await fetch('http://localhost:5001/login', {
+  const loginResponse = await fetch('http://localhost:5001/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -259,7 +259,7 @@ async function authenticateForPhishing() {
     }
     
     const authResult = await loginResponse.json();
-    console.log('Authentication successful for phishing analysis');
+  console.log('Authentication successful for phishing analysis');
     return authResult;
     
   } catch (error) {

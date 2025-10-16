@@ -1,4 +1,4 @@
-# CipherCop 2025 - Clone Detection System
+# FraudLens 2025 - Clone Detection System
 
 A sophisticated phishing website detection system that combines Google's Gemini AI and Cloud Vision API to identify fraudulent websites attempting to impersonate legitimate brands.
 
@@ -31,8 +31,8 @@ The system uses a three-tier detection approach:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/karthikeyamaddu/cipher-cop-2025.git
-   cd cipher-cop-2025
+   git clone https://github.com/karthikeyamaddu/fraudlens-2025.git
+   cd fraudlens-2025
    git checkout clone-detection-gemini
    ```
 
@@ -148,7 +148,7 @@ python test_vision.py
 ## 📁 Project Structure
 
 ```
-cipher-cop-2025/
+fraudlens-2025/
 ├── app.py                      # Main Flask application
 ├── config_loader.py            # Configuration management
 ├── requirements.txt            # Python dependencies

@@ -1,6 +1,6 @@
-// API Communication Utilities for CipherCop Extension
+// API Communication Utilities for FraudLens Extension
 
-class CipherCopAPI {
+class FraudLensAPI {
     constructor() {
         this.endpoints = {
             clone: {
@@ -119,7 +119,7 @@ class CipherCopAPI {
                 body: JSON.stringify({
                     extensionId: chrome?.runtime?.id || 'browser-extension',
                     version: chrome?.runtime?.getManifest?.()?.version || '1.0.0',
-                    userAgent: 'CipherCop-Extension'
+                    userAgent: 'FraudLens-Extension'
                 })
             });
             
@@ -180,7 +180,7 @@ class CipherCopAPI {
 
 // Export for use in other modules
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = CipherCopAPI;
+    module.exports = FraudLensAPI;
 } else {
-    window.CipherCopAPI = CipherCopAPI;
+    window.FraudLensAPI = FraudLensAPI;
 }

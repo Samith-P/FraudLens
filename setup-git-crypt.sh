@@ -1,8 +1,8 @@
 #!/bin/bash
-# Git-Crypt Setup Script for CipherCop 2025
+# Git-Crypt Setup Script for FraudLens 2025
 # This script initializes git-crypt for protecting sensitive environment files
 
-echo "🔐 Git-Crypt Setup for CipherCop 2025"
+echo "🔐 Git-Crypt Setup for FraudLens 2025"
 echo "======================================"
 
 # Check if git-crypt is installed
@@ -43,10 +43,10 @@ fi
 # Generate a key for the project
 echo ""
 echo "🔑 Generating git-crypt key..."
-git-crypt export-key ciphercop-git-crypt.key
+git-crypt export-key fraudlens-git-crypt.key
 
 if [ $? -eq 0 ]; then
-    echo "✅ Key exported to: ciphercop-git-crypt.key"
+    echo "✅ Key exported to: fraudlens-git-crypt.key"
     echo "⚠️  IMPORTANT: Keep this key file safe and secure!"
     echo "   - Share it securely with authorized team members"
     echo "   - Do NOT commit this key to the repository"
@@ -66,10 +66,10 @@ echo ""
 echo "📋 Next steps:"
 echo "   1. Add and commit the .gitattributes file"
 echo "   2. Add and commit your .env files (they will be encrypted)"
-echo "   3. Share ciphercop-git-crypt.key securely with team members"
+echo "   3. Share fraudlens-git-crypt.key securely with team members"
 echo ""
 echo "🔓 To unlock files on a new machine:"
-echo "   git-crypt unlock ciphercop-git-crypt.key"
+echo "   git-crypt unlock fraudlens-git-crypt.key"
 echo ""
 echo "🔒 To lock files (optional):"
 echo "   git-crypt lock"

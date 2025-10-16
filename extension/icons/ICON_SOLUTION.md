@@ -13,7 +13,7 @@ If you want to add custom icons later, you can:
 
 ### Method 1: Simple Online Creation
 1. Go to https://favicon.io/favicon-generator/
-2. Create a simple shield design with "CC" text
+2. Create a simple shield design with "FL" text
 3. Download all sizes (16x16, 32x32, 48x48, 128x128)
 4. Save them in the `icons/` folder
 5. Add the icon references back to manifest.json
@@ -33,7 +33,7 @@ When you have the icon files, add this to manifest.json:
 ```json
 "action": {
   "default_popup": "popup/popup.html",
-  "default_title": "CipherCop Security Scanner",
+  "default_title": "FraudLens Security Scanner",
   "default_icon": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",

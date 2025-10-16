@@ -202,4 +202,4 @@ config/local_*.yml
 # Service account keys (security)
 *service-account*.json
 *credentials*.json
-cipher-cop-*.json
+fraudlens-*.json

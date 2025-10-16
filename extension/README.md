@@ -1,4 +1,4 @@
-# CipherCop Security Extension
+# FraudLens Security Extension
 
 A professional browser extension for detecting clone websites and phishing attacks using advanced AI and machine learning technologies.
 
@@ -28,7 +28,7 @@ A professional browser extension for detecting clone websites and phishing attac
 1. Open Chrome and navigate to `chrome://extensions/`
 2. Enable "Developer mode" in the top right
 3. Click "Load unpacked" and select the `extension` folder
-4. The CipherCop extension will appear in your browser toolbar
+4. The FraudLens extension will appear in your browser toolbar
 
 ### Method 2: Package Installation
 1. Package the extension: Go to `chrome://extensions/` → Pack extension
@@ -52,7 +52,7 @@ Ensure the following backend services are running:
 
 ### Clone Detection
 1. Navigate to any website
-2. Click the CipherCop extension icon
+2. Click the FraudLens extension icon
 3. Click **"Check Clone Score"**
 4. View real-time analysis results
 
@@ -79,7 +79,7 @@ Ensure the following backend services are running:
 ### Main Interface
 ```
 ┌─────────────────────────────────┐
-│ 🛡️ CipherCop Security Scanner   │
+│ 🛡️ FraudLens Security Scanner   │
 ├─────────────────────────────────┤
 │ Current Site: example.com       │
 │ Status: 🔒 Secure               │
@@ -193,7 +193,7 @@ Enable Chrome DevTools for the extension:
 
 ## 📄 License
 
-This project is part of the CipherCop security suite. All rights reserved.
+This project is part of the FraudLens security suite. All rights reserved.
 
 ## 🆘 Support
 
@@ -214,4 +214,4 @@ For issues or questions:
 
 ---
 
-**Note**: This extension requires the CipherCop backend services to be running for full functionality. Ensure all required services are properly configured before use.
+**Note**: This extension requires the FraudLens backend services to be running for full functionality. Ensure all required services are properly configured before use.

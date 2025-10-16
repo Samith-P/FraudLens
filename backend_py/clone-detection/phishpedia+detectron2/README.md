@@ -59,8 +59,8 @@ detectron2/               # External dependency (do not modify)
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/karthikeyamaddu/cipher-cop-2025.git
-   cd cipher-cop-2025
+   git clone https://github.com/karthikeyamaddu/fraudlens-2025.git
+   cd fraudlens-2025
    ```
 
 2. **Set up with Pixi (Recommended)**

@@ -1,4 +1,4 @@
-# 🛡️ CipherCop - Phishpedia Clone Detection v1
+# 🛡️ FraudLens - Phishpedia Clone Detection v1
 
 <div align="center">
 
@@ -43,10 +43,10 @@ This is a **debugged and enhanced version** of Phishpedia - a hybrid deep learni
 ### Installation
 
 1. **Clone the repository**
-   ```bash
-   git clone https://github.com/karthikeyamaddu/cipher-cop.git
-   cd cipher-cop
-   ```
+  ```bash
+  git clone https://github.com/karthikeyamaddu/fraudlens.git
+  cd fraudlens
+  ```
 
 2. **Set up virtual environment**
    ```bash
@@ -153,7 +153,7 @@ test_site_folder/
 ## 📁 **Project Structure**
 
 ```
-cipher-cop/
+fraudlens/
 ├── models/                     # Model files (download separately)
 │   ├── rcnn_bet365.pth        # Logo detection model
 │   ├── resnetv2_rgb_new.pth.tar # Brand matching model

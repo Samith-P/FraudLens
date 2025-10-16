@@ -1,7 +1,7 @@
 # 🔐 Environment File Security Setup
 
 ## 📋 Overview
-This directory contains tools for managing and securing environment files in the CipherCop 2025 project.
+This directory contains tools for managing and securing environment files in the FraudLens 2025 project.
 
 ## 🛠️ Tools Provided
 
@@ -67,7 +67,7 @@ chmod +x setup-git-crypt.sh
 git-crypt init
 
 # Export the encryption key
-git-crypt export-key ciphercop-git-crypt.key
+git-crypt export-key fraudlens-git-crypt.key
 
 # Check status
 git-crypt status
@@ -86,7 +86,7 @@ The `.gitattributes` file specifies these files for encryption:
 1. **Clone the repository**
 2. **Unlock encrypted files:**
    ```bash
-   git-crypt unlock ciphercop-git-crypt.key
+   git-crypt unlock fraudlens-git-crypt.key
    ```
 3. **Create your own .env files** from .env.example templates
 4. **Run the backup script** if needed:
@@ -113,17 +113,17 @@ The `.gitattributes` file specifies these files for encryption:
    ```
 2. **Unlock when needed:**
    ```bash
-   git-crypt unlock ciphercop-git-crypt.key
+   git-crypt unlock fraudlens-git-crypt.key
    ```
 
 ## 📁 File Structure
 ```
-ciphercopdemo/
+FraudLens/
 ├── create_env_backups.py          # Backup generator script
 ├── setup-git-crypt.bat            # Windows git-crypt setup
 ├── setup-git-crypt.sh             # Linux/macOS git-crypt setup
 ├── .gitattributes                 # Git-crypt configuration
-├── ciphercop-git-crypt.key        # Encryption key (keep secure!)
+├── fraudlens-git-crypt.key        # Encryption key (keep secure!)
 ├── backend/
 │   ├── .env                       # 🔒 Encrypted
 │   ├── .env.example              # Public template
@@ -147,7 +147,7 @@ ciphercopdemo/
 ## 🔑 Key Management
 
 ### Security Best Practices
-- **Never commit** `ciphercop-git-crypt.key` to the repository
+- **Never commit** `fraudlens-git-crypt.key` to the repository
 - **Share the key securely** (encrypted email, secure file sharing)
 - **Store backups** of the key in multiple secure locations
 - **Rotate keys periodically** for enhanced security
@@ -205,7 +205,7 @@ git-crypt status
 git-crypt lock
 
 # Unlock files
-git-crypt unlock ciphercop-git-crypt.key
+git-crypt unlock fraudlens-git-crypt.key
 ```
 
 ---
