@@ -33,7 +33,6 @@ A comprehensive, AI-powered cybersecurity platform that provides real-time prote
 ### 🌐 **Browser Extension**
 - **Real-time Protection**: Passive background monitoring
 - **Clean Interface**: Professional, non-intrusive design
-- **Instant Alerts**: Real-time threat notifications
 - **Privacy-Focused**: No external data storage
 
 ## 🏗️ Architecture
